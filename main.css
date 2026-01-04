@@ -28,14 +28,8 @@ html, body {
   background-color: #ffffff !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  html,
-  body {
-    background-color: #ffffff !important;
-  }
-}
-
 *{
+    filter: none !important;
     color: rgb(80, 80, 80);
     /* font-family: "Lato", sans-serif;
     font-weight: 400;
@@ -50,6 +44,7 @@ html, body {
     font-style: normal;
     font-size: 1.2rem;
 }
+
 body {
     background-color: rgb(255, 255, 255) !important;
 }
