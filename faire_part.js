@@ -3,39 +3,11 @@ let lastScrollY = 0;
 
 $(document).ready(function() {
     
-    
-    const jordan = document.getElementById("ImgJordan");
-    const jason = document.getElementById("ImgJason");
-    const jordanOffset = jordan.offsetWidth / 1.5;
-    const jasonOffset = jason.offsetWidth / 1.5;
-    const center = window.visualViewport.height / 2 - (jordan.height/2); // - la moitié de la hauter de l'image
-    
-    jordan.style.transform = `translate(calc(-50% - ${jordanOffset}px), 0)`;
-    jason.style.transform = `translate(calc(-50% + ${jasonOffset}px),0)`;   
 
-        updateCenter(jordan, center);
+});
 
-    let stableVH = window.innerHeight;
-
-    window.addEventListener("resize", () => {
-        updateCenter(jordan, center);
-    });
-
-
-
-    let targetScrollY = 0;
-
-    window.addEventListener("scroll", () => {
-        targetScrollY = window.scrollY;
-
-        if (!isTicking) {
-            requestAnimationFrame(() => {
-                updateParallax(targetScrollY, stableVH, jordan, jason, jordanOffset, jasonOffset);
-            });
-            isTicking = true;
-        }
-    });
-
+window.addEventListener("load", () => {
+    initParallax();
 });
 
 function updateParallax(targetScrollY, stableVH, jordan, jason, jordanOffset, jasonOffset) {
@@ -68,4 +40,38 @@ function updateParallax(targetScrollY, stableVH, jordan, jason, jordanOffset, ja
 
 function updateCenter(jordan, center) {
     document.documentElement.style.setProperty("--centerY", center + "px");
+}
+
+function  initParallax() {
+    const jordan = document.getElementById("ImgJordan");
+    const jason = document.getElementById("ImgJason");
+    const jordanOffset = jordan.offsetWidth / 1.5;
+    const jasonOffset = jason.offsetWidth / 1.5;
+    const center = window.visualViewport.height / 2 - (jordan.height/2); // - la moitié de la hauter de l'image
+    
+    jordan.style.transform = `translate(calc(-50% - ${jordanOffset}px), 0)`;
+    jason.style.transform = `translate(calc(-50% + ${jasonOffset}px),0)`;   
+
+        updateCenter(jordan, center);
+
+    let stableVH = window.innerHeight;
+
+    window.addEventListener("resize", () => {
+        updateCenter(jordan, center);
+    });
+
+
+
+    let targetScrollY = 0;
+
+    window.addEventListener("scroll", () => {
+        targetScrollY = window.scrollY;
+
+        if (!isTicking) {
+            requestAnimationFrame(() => {
+                updateParallax(targetScrollY, stableVH, jordan, jason, jordanOffset, jasonOffset);
+            });
+            isTicking = true;
+        }
+    });
 }
