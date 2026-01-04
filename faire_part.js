@@ -1,4 +1,5 @@
 let isTicking = false; // <-- GLOBAL !
+let lastScrollY = 0;
 
 $(document).ready(function() {
     
@@ -46,8 +47,12 @@ function updateParallax(targetScrollY, stableVH, jordan, jason, jordanOffset, ja
     const jasonRect = jason.getBoundingClientRect();
     const distance = jasonRect.left - jordanRect.right;
 
-    if (distance <= 0) {
+    const scrollingDown = targetScrollY > lastScrollY;
+
+    // 🔒 Bloquer uniquement si elles se touchent ET qu'on descend
+    if (distance <= 0 && scrollingDown) {
         isTicking = false;
+        lastScrollY = targetScrollY;
         return;
     }
 
@@ -55,8 +60,9 @@ function updateParallax(targetScrollY, stableVH, jordan, jason, jordanOffset, ja
         `translate(calc(-50% - ${jordanOffset - stableScroll * speed}px), 0px)`;
 
     jason.style.transform =
-        `translate(calc(-50% + ${jasonOffset - stableScroll * speed}px),0px)`;
+        `translate(calc(-50% + ${jasonOffset - stableScroll * speed}px), 0px)`;
 
+    lastScrollY = targetScrollY;
     isTicking = false;
 }
 

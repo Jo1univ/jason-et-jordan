@@ -22,7 +22,7 @@ html, body {
 }
 
 *{
-    color: brown;
+    color: rgb(80, 80, 80);
     /* font-family: "Lato", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -40,7 +40,7 @@ body {
     background-color: rgb(255, 255, 255) !important;
 }
 
-a{
+.red{
   color: brown !important;
 }
 
