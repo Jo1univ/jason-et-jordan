@@ -1,3 +1,7 @@
+:root {
+  color-scheme: light;
+}
+
 @font-face {
   font-family: 'MilkyWalky';
   src: url('fonts/MilkyWalky-Regular.woff') format('woff');
