@@ -28,6 +28,13 @@ html, body {
   background-color: #ffffff !important;
 }
 
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    background-color: #ffffff !important;
+  }
+}
+
 *{
     color: rgb(80, 80, 80);
     /* font-family: "Lato", sans-serif;
