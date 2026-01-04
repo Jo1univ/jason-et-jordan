@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Page HTML de base avec toutes les balises essentielles, Bootstrap et Google Fonts.">
+  <title>Page HTML complète</title>
+
+  <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Federo&family=Limelight&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+      <!-- jQuery (CDN officiel) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+      <!-- Inclusion du fichier JS -->
+    <script src="faire_part.js"></script>
+</head>
+<!-- Bootstrap jS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<body class= "overflow-x-hidden w-100">
+
+
+
+  <!-- Contenu principal -->
+   <div class="p-3 align-items-center container fp-container">
+        <!-- <h1 class="title">Jordan</h1>
+        <h1 class="title">&</h1>
+        <h1 class="title">Jason</h1> -->
+        <div class="container w-100 pt-3">
+            <img id='JAndJ' class="w-100" src="resources/img/j-and-j.png" alt="">
+        </div>
+        <div class="container pt-5 pb-2">
+            <p>
+              Nous avons le plaisir de vous inviter à notre mariage 
+            </p>
+        </div>
+        <div class="container w-100 pt-3">
+          <p>
+              Le samedi
+            </p>
+            <img id='date' class="w-100" src="resources/img/date.png" alt="">
+            <p></p>
+            
+        </div>
+        <div class="container py-5">
+            <p>
+              Rendez-vous à 16h au clos des Saules à Tenteling.
+            </p>
+        </div>
+        <div class="container py-5 ">
+            <p class="font-size-less">
+              Merci de confirmer votre présence avant le 01 Fevrier 2026
+            </p>
+        </div>
+
+        <!-- Collapse -->
+    <p class="d-inline-flex gap-1">
+      <a href="#Details"
+        id="DetailsButton"
+        data-bs-toggle="collapse"
+        role="button"
+        aria-expanded="true"
+        aria-controls="Details">
+        Programme
+      </a>
+    </p>
+
+    <div class="collapse" id="Details">
+      <div class="card card-body">
+        ... En cours
+      </div>
+    </div>
+
+   </div>
+
+
+    <img id='ImgJordan' src="resources/img/jordan.png" alt="">
+    <img id='ImgJason' src="resources/img/jason.png" alt="">
+  
+  <!-- Pied de page -->
+  <div class="text-center">
+   
+</div>
+
+
+</body>
+</html>

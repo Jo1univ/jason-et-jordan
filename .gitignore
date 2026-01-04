@@ -1,0 +1,12 @@
+# fichiers système
+.DS_Store
+Thumbs.db
+
+# dépendances
+node_modules
+
+# fichiers temporaires
+.log
+
+# fichiers perso  secrets
+.env
