@@ -120,3 +120,28 @@ html, body {
   transform: translateX(-50%); /* plus de translateY en % */
   will-change: transform;
 }
+
+#samsung-warning {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 90%;
+  background: #fff;
+  color: #222;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  font-size: 0.9rem;
+  z-index: 9999;
+}
+
+#samsung-warning button {
+  margin-top: 0.5rem;
+  border: none;
+  background: #222;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+}

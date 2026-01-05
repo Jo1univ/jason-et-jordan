@@ -8,6 +8,24 @@ $(document).ready(function() {
 
 window.addEventListener("load", () => {
     initParallax();
+
+    
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (!isSamsungInternet()) return;
+
+  if (localStorage.getItem("samsungWarningSeen")) return;
+
+  const warning = document.getElementById("samsung-warning");
+  const closeBtn = document.getElementById("close-warning");
+
+  warning.hidden = false;
+
+  closeBtn.addEventListener("click", () => {
+    warning.hidden = true;
+    localStorage.setItem("samsungWarningSeen", "1");
+  });
 });
 
 function updateParallax(targetScrollY, stableVH, jordan, jason, jordanOffset, jasonOffset) {
@@ -74,4 +92,8 @@ function  initParallax() {
             isTicking = true;
         }
     });
+}
+
+function isSamsungInternet() {
+  return /SamsungBrowser/i.test(navigator.userAgent);
 }
