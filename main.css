@@ -33,8 +33,11 @@ html, body {
 }
 
 .bg-img-white {
-  background-color : rgb(156, 145, 145);
+   background-image: url("bg-white.png");
+    background-repeat: repeat;
 }
+
+
 
 *{
     color: rgb(80, 80, 80);
