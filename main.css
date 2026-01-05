@@ -122,18 +122,22 @@ html, body {
 }
 
 #samsung-warning {
-  position: fixed;
+  position: absolute;
   bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
   max-width: 90%;
+  min-width: 90%;
   background: #fff;
   color: #222;
   border-radius: 12px;
   padding: 1rem 1.2rem;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-  font-size: 0.9rem;
   z-index: 9999;
+}
+
+#samsung-warning p, #samsung-warning p strong {
+  font-size: 0.8rem !important;
 }
 
 #samsung-warning button {

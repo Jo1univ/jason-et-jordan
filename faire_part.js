@@ -95,5 +95,6 @@ function  initParallax() {
 }
 
 function isSamsungInternet() {
+    return true;
   return /SamsungBrowser/i.test(navigator.userAgent);
 }
