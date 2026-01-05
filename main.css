@@ -33,8 +33,7 @@ html, body {
 }
 
 .bg-img-white {
-   background-image: url("bg-white.png");
-    background-repeat: repeat;
+   background-color: white;
 }
 
 
@@ -148,4 +147,12 @@ html, body {
   padding: 0.4rem 0.8rem;
   border-radius: 8px;
   cursor: pointer;
+}
+
+@supports (-webkit-touch-callout: none) {
+  #ImgJordan,
+  #ImgJason {
+    will-change: auto;
+    transform: translate(-50%, 0);
+  }
 }
