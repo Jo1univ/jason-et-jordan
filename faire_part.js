@@ -2,7 +2,16 @@ let isTicking = false; // <-- GLOBAL !
 let lastScrollY = 0;
 
 $(document).ready(function() {
-    
+// scroll down au clic sur Details
+  $("#DetailsButton").on("click", () => {
+        // window.scrollBy({
+        // top: window.innerHeight + (window.innerHeight * 0.5),
+        // left: 0,
+        // behavior: "smooth"
+        //  }); 
+
+        window.scrollBy(0, 50);
+    });
 
 });
 
@@ -43,6 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
     warning.hidden = true;
     localStorage.setItem("samsungWarningSeen", "1");
   });
+
+
 });
 
 function updateParallax(targetScrollY, stableVH, jordan, jason, jordanOffset, jasonOffset) {
@@ -116,7 +127,7 @@ function isSamsungInternet() {
 }
 
 function isIOS() {
-    return true;
   return /iPad|iPhone|iPod/.test(navigator.userAgent)
     || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
 }
+

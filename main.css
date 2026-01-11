@@ -51,7 +51,6 @@ html, body {
     font-family: "Nothing You Could Do", cursive;
     font-weight: 600;
     font-style: normal;
-    font-size: 1.2rem;
 }
 
 
@@ -65,6 +64,10 @@ html, body {
   font-weight: 400;
   font-style: normal;
 
+}
+
+.font-size-more {
+  font-size: 1.3rem;
 }
 
 .font-size-less {
@@ -155,4 +158,13 @@ html, body {
     will-change: auto;
     transform: translate(-50%, 0);
   }
+}
+
+.z-index-10 {
+  z-index:10;
+}
+
+ul{
+    list-style: none !important;
+  padding: 0 !important;
 }
