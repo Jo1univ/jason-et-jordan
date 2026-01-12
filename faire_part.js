@@ -55,18 +55,20 @@ window.addEventListener("load", () => {
 document.addEventListener("DOMContentLoaded", () => {
   if (!isSamsungInternet()) return;
 
-  if (localStorage.getItem("samsungWarningSeen")) return;
+  if(window.matchMedia('(prefers-color-scheme: dark)').matches) {
 
-  const warning = document.getElementById("samsung-warning");
-  const closeBtn = document.getElementById("close-warning");
-
-  warning.hidden = false;
-
-  closeBtn.addEventListener("click", () => {
-    warning.hidden = true;
-    localStorage.setItem("samsungWarningSeen", "1");
-  });
-
+      if (localStorage.getItem("samsungWarningSeen")) return;
+    
+      const warning = document.getElementById("samsung-warning");
+      const closeBtn = document.getElementById("close-warning");
+    
+      warning.hidden = false;
+    
+      closeBtn.addEventListener("click", () => {
+        warning.hidden = true;
+        localStorage.setItem("samsungWarningSeen", "1");
+      });
+  }
 
 });
 
