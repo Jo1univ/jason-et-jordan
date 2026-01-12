@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //   if(window.matchMedia('(prefers-color-scheme: dark)').matches) {
 
-      if (localStorage.getItem("samsungWarningSeen")) return;
+    //   if (localStorage.getItem("samsungWarningSeen")) return;
     
       const warning = document.getElementById("samsung-warning");
       const closeBtn = document.getElementById("close-warning");
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
       closeBtn.addEventListener("click", () => {
         warning.hidden = true;
         localStorage.setItem("samsungWarningSeen", "1");
-      });
+    //   });
 //   }
 
 });
