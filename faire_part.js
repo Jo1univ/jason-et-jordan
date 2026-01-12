@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
       closeBtn.addEventListener("click", () => {
         warning.hidden = true;
         localStorage.setItem("samsungWarningSeen", "1");
-    //   });
+       });
 //   }
 
 });
