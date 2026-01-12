@@ -10,7 +10,21 @@ $(document).ready(function() {
         // behavior: "smooth"
         //  }); 
 
-        window.scrollBy(0, 50);
+        setTimeout( () => {
+            console.log($("#Details").hasClass('show'));
+            console.log("vfd");
+            if ($("#Details").hasClass("show")) {
+                window.scrollBy({
+                top: window.innerHeight * 0.5,
+                left: 0,
+                behavior: "smooth"
+                }); 
+
+                // window.scrollBy(0, 110);
+            }
+        },400);
+        
+        
     });
 
 });
