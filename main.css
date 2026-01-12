@@ -125,6 +125,7 @@ html, body {
 
 #samsung-warning {
   position: fixed;
+  background-color: #818181;
   bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
@@ -139,7 +140,7 @@ html, body {
 }
 
 #samsung-warning p, #samsung-warning p strong {
-  font-size: 0.8rem !important;
+  font-size: 1rem !important;
 }
 
 #samsung-warning button {
