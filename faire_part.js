@@ -55,7 +55,6 @@ window.addEventListener("load", () => {
 document.addEventListener("DOMContentLoaded", () => {
   if (!isSamsungInternet()) return;
 
-  if(window.matchMedia('(prefers-color-scheme: dark)').matches) {
 
     //   if (localStorage.getItem("samsungWarningSeen")) return;
     
@@ -68,7 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
         warning.hidden = true;
         localStorage.setItem("samsungWarningSeen", "1");
        });
-  }
 
 });
 
